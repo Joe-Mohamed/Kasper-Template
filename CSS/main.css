@@ -710,7 +710,7 @@ header nav .form i {
 
 .stats .container .box div {
     font-size: 45px;
-    
+
 }
 
 .stats .container .box p {
@@ -719,3 +719,10 @@ header nav .form i {
 }
 
 /* End Stats */
+/* Start Our Skills  */
+.our-skills {
+    padding-top: var(--sectionPadding);
+    padding-bottom: var(--sectionPadding);
+}
+
+/* End Our Skills  */
