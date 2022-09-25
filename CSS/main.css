@@ -304,7 +304,7 @@ header nav .form i {
     right: 0;
 }
 
-.bullets {
+.landing .bullets {
     display: flex;
     position: absolute;
     bottom: 5%;
@@ -328,7 +328,7 @@ header nav .form i {
     -o-border-radius: 50%;
 }
 
-.bullets .active {
+.landing .bullets .active {
     background-color: var(--mainColor);
     border-color: var(--mainColor);
 }
@@ -481,6 +481,11 @@ header nav .form i {
 .portfolio .images-box .box {
     position: relative;
     overflow: hidden;
+}
+
+.portfolio .images-box .box img {
+    max-width: 100%;
+    transition: 0.3s;
 }
 
 .portfolio .images-box .box:hover .caption {
@@ -690,9 +695,6 @@ header nav .form i {
     }
 }
 
-
-
-
 .stats .container .box i {
     width: 40px;
     height: 40px;
@@ -723,6 +725,154 @@ header nav .form i {
 .our-skills {
     padding-top: var(--sectionPadding);
     padding-bottom: var(--sectionPadding);
+}
+
+.our-skills .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.our-skills .container>div>h3 {
+    font-weight: normal;
+    text-transform: uppercase;
+    margin: 0 0 30px;
+    text-align: center;
+}
+
+
+.our-skills .container>div>p {
+    line-height: 2;
+    margin-bottom: 50px;
+    color: #777;
+    text-align: center;
+}
+
+
+.our-skills .container .content {
+    align-items: center;
+    display: flex;
+    margin-bottom: 30px;
+}
+
+
+
+.our-skills .testimonials .content img {
+    width: 100px;
+    border-radius: 50%;
+    margin-right: 50px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.our-skills .container .content .text {
+    line-height: 1.8;
+    border-bottom: 1px solid #777;
+}
+
+.our-skills .container .content .text p {
+    text-align: right;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.our-skills .container .bullets {
+    display: flex;
+    justify-content: center;
+    margin: 50px 0;
+}
+
+.our-skills .testimonials .bullets li {
+    width: 14px;
+    height: 14px;
+    border: 1px solid #aaa;
+    border-radius: 50%;
+    margin-right: 10px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.our-skills .testimonials .bullets li.active {
+    background-color: var(--mainColor);
+    border-color: var(--mainColor);
+}
+
+@media (min-width: 992px) {
+    .our-skills .container>div {
+        flex-basis: 45%;
+    }
+}
+
+@media (max-width: 767px) {
+    .our-skills .testimonials .content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .our-skills .testimonials .content img {
+        margin: 0 auto 20px;
+    }
+}
+
+/* Skills  */
+.our-skills .skills .prog-holder {
+    margin-bottom: 40px;
+}
+
+.our-skills .skills .prog-holder h4 {
+    font-weight: normal;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.our-skills .skills .prog-holder .prog {
+    background-color: #dedadc;
+    height: 30px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.our-skills .skills .prog-holder .prog span {
+    background-color: var(--mainColor);
+    display: block;
+    position: relative;
+    height: 100%;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.our-skills .skills .prog-holder .prog span::before {
+    content: attr(data-progress);
+    position: absolute;
+    background: black;
+    color: white;
+    padding: 4px 0;
+    border-radius: 4px;
+    top: -40px;
+    width: 40px;
+    text-align: center;
+    right: -18px;
+}
+
+.our-skills .skills .prog-holder .prog span::after {
+    content: "";
+    position: absolute;
+    border-style: solid;
+    border-width: 8px;
+    border-color: black transparent transparent;
+    right: -6px;
+    top: -15px;
+
 }
 
 /* End Our Skills  */
