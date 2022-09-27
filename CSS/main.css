@@ -486,6 +486,10 @@ header nav .form i {
 .portfolio .images-box .box img {
     max-width: 100%;
     transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
 }
 
 .portfolio .images-box .box:hover .caption {
@@ -592,6 +596,16 @@ header nav .form i {
     background-color: var(--transparnetColor);
 }
 
+@media (max-width:767px) {
+    .video-design .text {
+        height: 90%;
+    }
+
+    .video-design .text button {
+        position: relative;
+        bottom: 30px;
+}
+}
 .video-design .text h2 {
     margin: 0 0 30px;
     text-transform: uppercase;
@@ -862,6 +876,10 @@ header nav .form i {
     width: 40px;
     text-align: center;
     right: -18px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
 }
 
 .our-skills .skills .prog-holder .prog span::after {
@@ -872,7 +890,153 @@ header nav .form i {
     border-color: black transparent transparent;
     right: -6px;
     top: -15px;
-
 }
 
+/*End Skills  */
 /* End Our Skills  */
+/* Start Quote  */
+.quote {
+    padding-top: var(--sectionPadding);
+    padding-bottom: var(--sectionPadding);
+    background-image: url(../media/quote.jpg);
+    background-size: cover;
+    color: white;
+    position: relative;
+    text-align: center;
+}
+
+.quote::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0 0 0 / 75%);
+}
+
+.quote .container {
+    position: relative;
+}
+
+.quote q {
+    font-size: 30px;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.quote span {
+    font-weight: lighter;
+    color: rgb(128, 124, 124);
+}
+
+/* End Quote  */
+/* Start Pricing  */
+
+.pricing {
+    padding-top: var(--sectionPadding);
+    padding-bottom: var(--sectionPadding);
+}
+
+.pricing .container .plans {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.pricing .container .plans .plan {
+    background-color: rgb(245, 245, 245);
+    text-align: center;
+}
+
+.pricing .container .plans .plan .header {
+    padding: 40px 20px;
+    border-top: 1px solid var(--mainColor);
+    border-bottom: 1px solid var(--mainColor);
+}
+
+.pricing .container .plans .plan .header h3 {
+    font-weight: normal;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.pricing .container .plans .plan .header span {
+    font-size: 50px;
+    font-weight: 600;
+}
+
+.pricing .container .plans .plan .header span::before {
+    content: "$";
+    font-weight: normal;
+    font-size: 25px;
+    position: relative;
+    top: -30px;
+    left: -15px;
+}
+
+.pricing .container .plans .plan .header span::after {
+    content: "/Mo";
+    font-size: 20px;
+    position: relative;
+    right: -15px;
+}
+
+.pricing .container .plans .plan ul {
+    border-bottom: 1px solid var(--mainColor);
+}
+
+.pricing .container .plans .plan ul li {
+    padding: 20px;
+    position: relative;
+}
+
+.pricing .plans .plan ul li:not(:last-child)::after {
+    content: "";
+    width: 140px;
+    height: 1px;
+    background-color: var(--mainColor);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+}
+
+.pricing .plans .plan .foot a {
+    padding: 20px 20px;
+    margin: 30px auto;
+    border: 1px solid var(--mainColor);
+    width: fit-content;
+    text-decoration: none;
+    text-transform: capitalize;
+    display: block;
+    color: gray;
+}
+
+.pricing .plans .plan .foot a:hover {
+    border-color: cyan;
+    color: blue;
+    text-transform: uppercase;
+}
+
+
+.pricing .contact-link {
+    display: block;
+    width: fit-content;
+    margin: 20px auto;
+    background-color: var(--mainColor);
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+}
+
+.pricing .contact-text {
+    text-align: center;
+    margin: 50px auto 20px;
+    font-size: 20px;
+    text-transform: capitalize;
+}
